@@ -8,7 +8,7 @@ require('dotenv').config();
 const port = process.env.PORT;
 
 const corsOptions = {
-    origin: ["https://rifario.netlify.app/", "http://localhost:5173"],
+    origin: ["https://rifario.netlify.app", "http://localhost:5173"],
     allowedHeaders: ["Content-Type", "Authorization", "Access-Control-Allow-Methods", "Access-Control-Request-Headers"],
     credentials: true,
     enablePreflight: true,
