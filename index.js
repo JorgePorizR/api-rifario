@@ -17,6 +17,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 //body parser para leer los datos del formulario
 const bodyParser = require('body-parser')
