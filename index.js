@@ -9,8 +9,11 @@ const port = process.env.PORT;
 
 const corsOptions = {
     origin: ["https://rifario.netlify.app/", "http://localhost:5173"],
-    optionsSuccessStatus: 200,
+    allowedHeaders: ["Content-Type", "Authorization", "Access-Control-Allow-Methods", "Access-Control-Request-Headers"],
     credentials: true,
+    enablePreflight: true,
+    optionsSuccessStatus: 200,
+    methods: "GET, POST, PUT, PATCH, DELETE"
 };
 
 app.use(cors(corsOptions));
