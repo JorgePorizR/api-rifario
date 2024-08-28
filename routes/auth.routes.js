@@ -8,5 +8,6 @@ module.exports = app => {
     router.post("/register", controller.registerUser);
     router.get("/me", checkUserMiddleware, controller.me);
 
+
     app.use('/api/', router);
 }
